@@ -1,0 +1,33 @@
+SAMPLES:
+    - "Spermatogonia_SRR9178994"
+    - "Spermatogonia_SRR9178995"
+    - "LeptonemaZygonema_SRR9178996"
+    - "PachynemaDiplonema_SRR9178997"
+    - "PachynemaDiplonema_SRR9178998"
+    - "PachynemaDiplonema_SRR9178999"
+    - "PachynemaDiplonema_SRR9179000"
+    - "RoundSpermatids_SRR9179001"
+    - "RoundSpermatids_SRR9179002"
+    - "RoundSpermatids_SRR9179003"
+    - "RoundSpermatids_SRR9179004"
+    - "Sperm_SRR9179005"
+    - "Sperm_SRR9179006"
+
+MERGE_PFX:
+    - "Spermatogonia"
+    - "LeptonemaZygonema"
+    - "PachynemaDiplonema"
+    - "RoundSpermatids"
+    - "Sperm"
+    
+GENOME:
+# everything before ".1.bt2"
+    - "/home/groups/hoolock2/u0/genomes/ucsc/mm10/indexes/bowtie2/mm10"
+DIGEST:
+# digest file make with the following command: 
+# hicup_digester --arima genome.fa 
+    - "/home/groups/hoolock2/u0/genomes/ucsc/mm10/hicup-digest/Digest_Mouse_mm10_MboI_None_12-47-05_13-09-2024.txt"
+CHRSIZES:
+    - "/home/groups/hoolock2/u0/genomes/ucsc/mm10/mm10.chrom.sizes"
+ASMBLY:
+    - "mm10"
