@@ -28,6 +28,7 @@ hicup_digester --re1 ^GATC,MboI --genome Mouse_mm10 --outdir hicup-digest/ *.fa 
 
 **Execution**:
 
+Execute the snakemake workflow on hoolock2 server. Workflow takes longer than 24h, thus job will timeout if you try to run on exacloud  
 ```
 snakemake --use-conda -j20
 snakemake --use-conda -j20 > $(date +"%y%m%d%H%M%S")_snakemake.out 2>&1
