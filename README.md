@@ -4,11 +4,13 @@ Snakemake workflow for QC and processing of HIC data. Results in on .cool file a
 
 **Prep**:
 
-Place raw HIC reads in a new directory data/raw
+Ensure snakemake is downloaded and appropriate conda env is active (for running snakemake)
 
 Ensure raw files are compressed (.fastq.gz) - snakemake workflow will error if files are unzipped .fastq
 
 If certain samples should be merged (replicates) make sure to give them the same prefix (eg. rhesus_sample1, rhesus_sample2) and designate this prefix in the configure file
+
+Place raw HIC reads in a new directory data/raw
 
 ```
 mkdir -p data/raw
@@ -28,7 +30,8 @@ hicup_digester --re1 ^GATC,MboI --genome Mouse_mm10 --outdir hicup-digest/ *.fa 
 
 **Execution**:
 
-Execute the snakemake workflow on hoolock2 server. Workflow takes longer than 24h, thus job will timeout if you try to run on exacloud  
+Execute the snakemake workflow on hoolock2 server. Workflow takes longer than 24h, thus job will timeout if you try to run on exacloud
+
 ```
 snakemake --use-conda -j20
 snakemake --use-conda -j20 > $(date +"%y%m%d%H%M%S")_snakemake.out 2>&1
